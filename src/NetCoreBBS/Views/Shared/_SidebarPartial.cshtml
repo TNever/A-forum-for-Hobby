@@ -1,0 +1,27 @@
+﻿@using NetCoreBBS.ViewComponents
+<div class="panel panel-default" style="margin-top:20px;">
+    <div class="panel-heading">
+        <h3 class="panel-title">HI 陌生人</h3>
+    </div>
+    <div class="panel-body">
+        <img src="~/images/1.jpg" style="width: 200px;height: 200px">
+        <br />
+        <h3>小帅的抱怨</h3>
+        青春结伴<br />
+        我以有过 <br />
+        是感恩、是满足<br />
+        没有遗憾 <br />
+        所以说，你真是个讨厌鬼！<br /><br />
+        小帅的博客：
+        <a href="https://www.cnblogs.com/WeiMLing/" target="_blank">
+            WeiMLing
+        </a><br />
+        小帅的GitHub：
+        <a href="https://github.com/TNever" target="_blank">
+            TNever
+        </a>(没有内容)<br /><br />
+        北京时间：@DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+    </div>
+</div>
+@(await Component.InvokeAsync<TopicRankList>(new { days = 30 }))
+@(await Component.InvokeAsync<Statistics>())
